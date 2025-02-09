@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title >WM Construtora</title>
+  <link rel="stylesheet" href="css/style3.css">
+  <link rel="shortcut icon" href="img/kauanzera.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pgprodutos.html">Produtos</a></li>
+        <li><a href="servi.html">Serviços</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+        <h1>WM Construtora</h1>
+        <h2 class="fe">Vendas, Projetos e Execução</h2>
+        <img src="img/kauan.png" alt="Imagem do produto" class="hero-image">
+    </div>
+</header>
+  <main>
+    <section id="produtos">
+      <h2 class="eu">Conheça nossos Serviços</h2>
+      <div>
+        <h3>Pinturas</h3>
+        <div class="product-container">
+          <div class="product">
+            <img src="img/PINTURA.jpg" alt="servicopintura">
+            <h4>Um serviço de pintura residencial ou em apartamento consiste na aplicação de tinta em paredes, tetos e outros elementos de um imóvel com o objetivo de renovar, proteger e embelezar os ambientes.</h4>
+            <p>----------------------------------------</p>
+            <button class="frase">Agendar a visita</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Montagem de móveis</h3>
+        <div class="product-container">
+          <div class="product">
+            <img src="img/moveis.jpg" alt="servicomoveis">
+            <h4>Um serviço de montagem de móveis consiste na instalação de móveis em um imóvel, seja ele uma casa ou apartamento. Esse serviço envolve a montagem de peças, a fixação em paredes ou outros pontos, e a organização dos móveis no ambiente de acordo com as necessidades do cliente.</h4>
+            <p>----------------------------------------</p>
+            <button class="frase">Agendar a visita</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 >Assentamento de Pisos, Porcelanatos</h3>
+        <div class="product-container">
+          <div class="product">
+            <img src="img/pisos.jpg" alt="servicopisos">
+            <h4>O assentamento de pisos e porcelanatos é um processo que envolve a instalação dessas peças em um determinado ambiente. Essa tarefa requer técnica e conhecimento específico, pois exige a preparação adequada do contrapiso, a escolha da argamassa correta e o alinhamento preciso de cada peça.</h4>
+            <p>----------------------------------------</p>
+            <button class="frase">Agendar a visita</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 >Consultoria e Assessoria Técnica</h3>
+        <div class="product-container">
+          <div class="product">
+            <img src="img/engenheiro.png" alt="servicopisos">
+            <h4>Consultoria e Assessoria Técnica são serviços especializados oferecidos por profissionais ou empresas para auxiliar na tomada de decisões e na resolução de problemas específicos. A consultoria envolve a análise e recomendação de soluções estratégicas, enquanto a assessoria foca no apoio operacional, ajudando na implementação e acompanhamento dessas soluções. </h4>
+            <p>----------------------------------------</p>
+            <button class="frase">Agendar a visita</button>
+          </div>
+        </div>
+      </div>
+    </section>
+</main> 
+<script class="form">
+  function mostrarFormulario(event) {
+    const produto = event.target.parentElement; 
+    const formulario = document.createElement('form');
+    formulario.innerHTML = `
+      <label for="nome">Nome:</label><input type="text" id="nome" name="nome" required>
+      <label for="endereco">Endereço:</label><input type="text" id="endereco" name="endereco" required>
+      <label for="telefone">Telefone:</label><input type="tel" id="telefone" name="telefone" required>
+      <button id="mario" type="submit">Enviar</button> `;
+    produto.appendChild(formulario);
+    formulario.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Simulação de agendamento realizada com sucesso, obrigado pela experiência, volte sempre.');});}
+  document.querySelectorAll('.product button').forEach(botao => 
+    botao.addEventListener('click', mostrarFormulario));
+</script>
+</body>
+</html>

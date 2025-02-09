@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WM Construtora</title>
+    <link rel="stylesheet" href="css/stylepag.css">
+    <link rel="shortcut icon" href="img/kauanzera.png" type="image/x-icon">
+</head>
+<body>
+    <div class="conteiner">
+        <h2>Formas de Pagamento</h2>
+        <label>
+          <input class="inpu" type="radio" name="metodo-pagamento" value="pix" checked> PIX
+        </label>
+        <label>
+          <input class="inpu" type="radio" name="metodo-pagamento" value="boleto"> Boleto Bancário
+        </label>
+        <div id="secao-pix">        
+                <img class="qr-code" src="img/qr.png" alt="QR Code">
+          <button class="botao" id="confirmar-pix">Confirmar Pagamento via PIX</button><br>
+        </div>
+        <div id="secao-boleto" style="display: none;">
+          <pre id="codigo-boleto">
+            <img src="img/codigobarra.png" alt="Código de Boleto" style="width: 100%; max-width: 400px;">
+          </pre><br>
+          <button class="botao" id="copiar-boleto">Copiar Código</button> <br>
+          <button class="botao" id="gerar-boleto">Confirmar Pagamento via Boleto</button><br>
+        </div>
+      </div>
+    <script src="js/segundo.js"></script>
+</body>
+</html>
